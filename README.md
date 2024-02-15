@@ -22,7 +22,7 @@ Estou sempre em busca de me autodesenvolver e evoluir dentro da area, gosto semp
 
 #### Sobre mim
 
-Apaixonado por computadores, tecnologia e matemática tenho 2 anos de experiência profissional junto aos 3 anos de estudo na área.
+Aficionado por computadores, tecnologia e matemática tenho 2 anos de experiência profissional junto aos 3 anos de estudo na área.
 
 Atualmente atuando como desenvolvedor de aplicações moveis com Dart e Flutter, atuando também no desenvolvimento de design seguindo as boas práticas objetivas de UI/UX.
 
