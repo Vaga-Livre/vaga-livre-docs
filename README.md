@@ -2,9 +2,15 @@
 
 ## Integrantes
 
-### Kelson Eduardo Filho
+### Kelson Eduardo de Carvalho Soares Filho
+Entusiasta de matematica e computadores, com pouco mais de 1 ano de experiencia na area, junto com tempo de estudo de 3 anos.
 
-### Kaike Dias
+Atualmente tenho focado meus estudos em desenvolvimento web front-end com React e Svelte, aliado a isso desenvolvo minhas habilidades em web back-end
+com a linguagem de programacao JAVA bem como o framework Spring Boot.
+
+Estou sempre em busca de me autodesenvolver e evoluir dentro da area, gosto sempre de explorar novas maneiras de resolver os problemas, sempre busco me atualizar ao maximo nas tecnologias do momento. 
+
+### Kaike Dias Miranda
 
 ### Igor Julliano Sotero
 
