@@ -1,0 +1,614 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{times}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{cite}
+\usepackage{indentfirst}
+\usepackage{url}
+\usepackage{xcolor}
+\usepackage{tabularx}
+% \usepackage{booktabs}
+\definecolor{barblue}{RGB}{153,204,254}
+\definecolor{groupblue}{RGB}{51,102,254}
+\definecolor{linkred}{RGB}{165,0,33} 
+\usepackage{geometry}
+\usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
+\usepackage{hyperref}
+
+\setlength{\parindent}{1.2cm}
+\setlength{\parskip}{.1cm}
+\setlength{\oddsidemargin}{0.1cm}    
+\setlength{\evensidemargin}{0.0cm}   
+\setlength{\topmargin}{-1.2cm}       
+\setlength{\headsep}{1.0cm}
+\setlength{\textwidth}{15.5cm}
+\setlength{\textheight}{24.2cm}
+\renewcommand{\baselinestretch}{1.2}
+\renewcommand{\labelitemi}{\tiny{\textbullet}}
+
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+
+\begin{document}
+\pagenumbering{roman}
+
+\begin{titlepage}
+\thispagestyle{empty}
+\begin{center}
+\large{\bf{IFPI - Instituto Federal de Educação, Ciência e Tecnologia do Piauí}} \\
+% \large{\bf{Campus Teresina Central}} \\
+% \large{\bf{Curso: Tecnólogo em Análise e Desenvolvimento de Sistemas}} \\
+% \large{\bf{Disciplina: Projeto Integrador III}} \\
+% \large{\bf{Professores: Fernando Santana e Ely Miranda}} \\
+\end{center}
+\vfill
+
+\centering
+\textbf{{\LARGE Documento de Visão - Vaga Livre}}  \\ \vspace{0.5cm}
+\vfill
+
+% \begin{tabular}{c}
+%     \textit{Autores}\\
+%     \hline
+%     Igor Julliano \\
+%     Kaíke Dias \\
+%     Kelson Eduardo 
+% \end{tabular}
+% \vfill
+
+\begin{center}
+\large{\today}
+\end{center}
+\end{titlepage}
+
+\pagenumbering{arabic}
+
+% \begin{abstract}
+% Em meio ao ritmo acelerado da vida urbana, encontrar vagas de estacionamento pode se transformar em um pesadelo. Dirigir em círculos por ruas congestionadas, lidar com filas em estacionamentos lotados e estacionar em locais apertados e mal iluminados são apenas alguns dos desafios que os motoristas enfrentam diariamente.
+
+% É com o objetivo de libertar os motoristas da frustração de encontrar vagas de estacionamento que nasce o Vaga Livre, um aplicativo inovador que conecta motoristas a vagas disponíveis em tempo real, utilizando tecnologia de ponta para oferecer uma experiência de usuário impecável.
+
+% Nossa missão é tornar o estacionamento mais fácil, eficiente e seguro para todos. Através do aplicativo, os motoristas terão acesso a uma série de recursos que facilitarão sua vida, como:
+
+% \begin{itemize}
+%     \item Visão em tempo real das vagas disponíveis em estacionamentos próximos: O aplicativo utiliza tecnologia de geolocalização para mostrar aos motoristas as vagas disponíveis em tempo real, permitindo que eles encontrem um lugar para estacionar rapidamente e sem estresse.
+%     \item Reserva de vagas com antecedência: Para garantir ainda mais comodidade, os motoristas poderão reservar vagas com antecedência, evitando filas e a frustração de não encontrar um lugar para estacionar.
+%     \item Pagamento rápido e seguro através do aplicativo: O aplicativo oferece diversas opções de pagamento rápido e seguro, como cartão de crédito, débito e pix, eliminando a necessidade de dinheiro em espécie e agilizando o processo de entrada e saída do estacionamento.
+% \end{itemize}
+
+% O aplicativo visa oferecer mais autonomia e agilidade aos motoristas, permitindo que eles percam menos tempo em interações de negociação ou burocracias com funcionários dos estacionamentos
+
+% \end{abstract}
+
+\vfill
+\pagebreak
+% TABLE OF CONTENTS
+\tableofcontents{}
+\pagebreak
+
+
+%------------------------------------------------------------------------------------------------------
+\section{Introdução}
+
+A proposta deste documento é coletar, analisar e definir as necessidades e funcionalidades gerais do projeto \textbf{Vaga Livre}. Seu foco está nas necessidades dos usuários e no motivo da existência destas necessidades.
+
+Seu escopo engloba a definição dos gestores do sistema, dos representantes dos usuários, seus problemas, necessidades e das características essenciais do sistema para o atendimento destes requisitos.
+
+Termos e abreviaturas específicos podem ser encontrados.
+
+\section{Posicionamento}
+
+\subsection{Oportunidade de negócio}
+
+O Vaga Livre resolve a frustração diária de encontrar vagas de estacionamento em centros urbanos congestionados, oferecendo uma experiência rápida, eficiente e sem estresse para os motoristas.
+
+A demanda por soluções inteligentes de estacionamento \href{https://iot-analytics.com/smart-parking-market-report-2019-2023/}{cresce de maneira acentuada com o aumento da frota de veículos e a urbanização}, criando um mercado ávido por inovações como o Vaga Livre.
+
+Desta forma o projeto almeja libertar os motoristas da frustração de encontrar vagas de estacionamento com um aplicativo inovador que conecta motoristas a vagas disponíveis em tempo real, utilizando tecnologia de ponta para oferecer uma experiência de usuário impecável.
+
+\subsection{Declaração do problema}
+
+\subsubsection{O problema}
+
+Em meio ao ritmo acelerado da vida urbana, encontrar vagas de estacionamento pode se transformar em um pesadelo. Dirigir em círculos por ruas congestionadas, lidar com filas em estacionamentos lotados e estacionar em locais apertados e mal iluminados são apenas alguns dos desafios que os motoristas enfrentam diariamente. 
+
+Assim temos que:
+
+\begin{itemize}
+    \item Encontrar vagas de estacionamento em centros urbanos congestionados é uma tarefa árdua e frustrante, consumindo tempo e gerando estresse para os motoristas.
+    \item A procura por vagas pode levar até 30 minutos em média, causando atrasos, irritação e impacto na qualidade de vida das pessoas.
+    \item A falta de vagas também contribui para o congestionamento urbano, poluição e emissão de gases poluentes.
+\end{itemize}
+
+\subsubsection{Quem ele afeta}
+
+Aqueles afetados com este problema são:
+
+\begin{itemize}
+    \item Motoristas em geral, especialmente em grandes cidades.
+    \item Pessoas com deficiência ou mobilidade reduzida.
+    \item Famílias com crianças pequenas.
+    \item Profissionais que dependem do carro para trabalhar, como motoristas de aplicativo, entregadores e vendedores.
+    \item Empresas que operam frotas de veículos.
+\end{itemize}
+
+
+\subsubsection{O impacto do problema}
+
+Com o problema, aqueles afetados experimentam
+
+\begin{itemize}
+    \item Perda de tempo e produtividade.
+    \item Aumento do estresse e da ansiedade.
+    \item Dificuldade de acesso a serviços essenciais, como saúde, educação e trabalho.
+    \item Prejuízos financeiros para empresas e motoristas.
+    \item Impacto negativo no meio ambiente.
+\end{itemize}
+
+\subsubsection{Solução}
+
+Uma solução bem sucedida seria:
+
+\begin{itemize}
+    \item Uma plataforma que permite aos motoristas encontrar e reservar vagas de estacionamento com antecedência, de forma rápida e fácil.
+    \item Um sistema que otimiza o uso dos espaços de estacionamento, reduzindo o tempo de procura por vagas e o congestionamento urbano.
+    \item Uma solução que oferece segurança e comodidade aos usuários, com pagamento automático e monitoramento das vagas.
+    \item Uma plataforma que contribui para a construção de cidades mais inteligentes e sustentáveis.
+\end{itemize}
+
+
+\section{Partes interessadas} % (fold)
+
+\begin{table}[h!]
+    \begin{tabularx}{\linewidth}{ | r | X | }
+        \hline
+        \bf{Representante} & \bf{Usuário} \\
+        \hline
+        \bf{Responsabilidades} & \tabitem{Encontrar e reservar vagas de estacionamento em tempo real.} \\
+         & \tabitem{Visualizar a localização, o preço e a disponibilidade das vagas em tempo real.} \\
+         & \tabitem{Pagar o estacionamento automaticamente através do aplicativo.} \\
+         & \tabitem{Receber notificações quando uma vaga estiver disponível na área desejada.} \\
+         & \tabitem{Monitorar o tempo de permanência no estacionamento.} \\
+         & \tabitem{Avaliar os estacionamentos e compartilhar suas experiências com outros usuários. Observações:} \\
+         & \tabitem{O aplicativo deve ser fácil de usar e intuitivo.} \\
+         & \tabitem{O sistema de pagamento deve ser seguro e confiável.} \\
+         & \tabitem{As informações sobre as vagas devem ser precisas e atualizadas em tempo real.} \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+
+\begin{table}[h!]
+    \begin{tabularx}{\linewidth}{ | r | X | }
+        \hline
+        \bf{Representante} & \bf{Próprietário do estacionamento} \\
+        \hline
+        \bf{Responsabilidades} &\tabitem{Definir o valor da tarifa de estacionamento.} \\
+         & \tabitem{Definir e atualizar a disponibilidade das vagas em tempo real.} \\
+         & \tabitem{Receber automaticamente os pagamentos das reservas online.} \\
+         & \tabitem{Receber os pagamentos das reservas feitas presencialmente.} \\
+         & \tabitem{Autorizar e gerenciar o acesso ao estacionamento de forma manual quando necessária.} \\
+         & \tabitem{Relatar a ocupação das vagas feitas fora do aplicativo em tempo real para manter o catalogo atualizado.} \\
+         & \tabitem{O sistema de pagamento deve ser seguro e confiável.} \\
+         & \tabitem{As informações sobre as vagas devem ser precisas e atualizadas em tempo real.} \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+% subsection Partes interessadas (end)
+
+%------------------------------------------------------------------------------------------------------
+
+% \section{Papéis e Responsabilidades Individuais dos membros:}
+% \subsection{Desenvolvedor Back end}
+% Kaike Dias Miranda.
+
+% \subsection{Desenvolvedor Front end}
+% Kelson Eduardo de Carvalho Soares Filho.
+
+% \subsection{Product Owner}
+% Prof. Fernando Castelo Branco.
+
+% \subsection{Team Leader}
+% Igor Julliano.
+
+% \subsection{Dev Ops}
+% Igor Julliano.
+
+% \subsection{Quality Assurance}
+% Igor Julliano e Kelson Eduardo
+
+% \pagebreak
+% %------------------------------------------------------------------------------------------------------
+
+% \section{Metodologia da Execução do Projeto}
+
+% \subsection{Front-end}
+% No contexto deste projeto, haverá um ambiente de front-end e back-end. Para o desenvolvimento do ambiente front-end, será utilizado o conjunto de bibliotecas conhecido como ReactJS, juntamente com o auxílio da linguagem Typescript. O ReactJS é uma biblioteca JavaScript popular que nos permite criar interfaces de usuário dinâmicas e reativas. O Typescript, por sua vez, é uma ferramenta que acrescenta produtividade ao desenvolvimento, aprimorando certos aspectos da linguagem JavaScript e adicionando um sistema de tipagem que ajuda no tratamento de erros e facilita o processo de criação. Com essa combinação, será possível a criação de um ambiente front-end poderoso e eficiente para a nossa aplicação.
+
+% \subsection{Back-end}
+% No ambiente de back-end do projeto, foi decidido adotar a linguagem de programação Kotlin em conjunto com o framework Spring. Essa escolha estratégica se deve à capacidade do Kotlin de proporcionar um desenvolvimento eficiente e altamente expressivo, combinado com a robustez e a ampla gama de recursos oferecidos pelo Spring.
+
+% O Kotlin, uma linguagem amplamente reconhecida e apoiada pela JetBrains, oferece uma sintaxe concisa e legível, o que agiliza a criação de código limpo e de fácil manutenção. Sua interoperabilidade perfeita com Java também torna a transição e a coexistência com sistemas legados mais suaves, o que é particularmente benéfico em cenários onde a integração é essencial.
+
+% O Spring, por sua vez, é um framework amplamente utilizado e bem estabelecido no desenvolvimento de aplicativos empresariais. Ele fornece uma infraestrutura abrangente para a construção de sistemas escaláveis e seguros. Através de seus módulos, como o Spring Boot, o Spring oferece recursos poderosos para a configuração simplificada, a criação de APIs RESTful e a gestão de dependências, permitindo que os desenvolvedores se concentrem mais na lógica de negócios do que nas complexidades da infraestrutura.
+
+% Além disso, o projeto se beneficiará da combinação do Kotlin com o Spring, já que o Kotlin oferece recursos modernos de programação funcional e de extensões de linguagem, que podem simplificar a manipulação de dados e a construção de APIs coerentes. A integração do Kotlin com o ecossistema do Spring permite aproveitar ao máximo os recursos de ambos, resultando em um backend robusto, de alto desempenho e de fácil manutenção.
+
+% \subsection{Design}
+% O Figma é uma poderosa ferramenta de design de interface de usuário baseada na web, que será utilizada para criar os designs das telas do nosso projeto. Com o Figma, a equipe poderá colaborar de forma eficiente, trabalhando simultaneamente no mesmo projeto, visualizando e editando em tempo real. Além disso, oferecendo recursos avançados para criação de componentes reutilizáveis, estilos globais, prototipagem interativa e exportação fácil de elementos gráficos. Com sua interface intuitiva e recursos robustos a criação de designs visualmente atraentes e consistentes será possível
+
+% %------------------------------------------------------------------------------------------------------
+% \section{Resultados Esperados}
+% Com o DaVinti Project almejamos alcançar resultados significativos na transformação da educação. Espera-se que o DaVinti Project forneça aos usuários uma solução eficiente para gerenciar seus conteúdos, cadastros de usuários e suas notas, contando com um ambiente acessível, fácil de usar. 
+
+% Os resultados do projeto serão apresentados ao professor responsável juntamente com a entrega do artigo ao final da disciplina. Além disso serão conduzidas apresentações para demonstrar as funcionalidades e o funcionamento do sistema.
+
+% \section{Disseminação dos Resultados}
+
+% Será prestado esforços para que os resultado de disseminação sejam alcançados:
+
+% \begin{itemize}
+%     \item Colaboração Aberta: Será provido um ambiente de colaboração aberta, convidando educadores, desenvolvedores e interessados a contribuírem com ideias e melhorias contínuas.
+%     \item Recursos Online: Será disponibilizado guias, tutoriais e materiais de suporte online para garantir que os educadores e administradores possam explorar todas as funcionalidades do DaVinti Project de forma eficaz.
+%     \item Parcerias Institucionais: Estabeleceremos parcerias com instituições educacionais para implementar o Projeto DaVinti e compartilhar experiências práticas.
+% \end{itemize}
+
+% \pagebreak
+% %------------------------------------------------------------------------------------------------------
+% \section{Descrição Geral do Processo}
+%     Nosso estágio inicial de planejamento teve início com a busca por projetos viáveis, sendo que direcionamos nosso foco para uma demanda específica proveniente do IFPI, fornecida pelo professor Fernando. Essa demanda estava relacionada à plataforma de Ensino a Distância (EAD) utilizada pelo instituto, o Moodle. Essa plataforma é a espinha dorsal dos sistemas educacionais da instituição. Para aprofundar nossa compreensão, colaboramos com membros internos da instituição, que forneceram insights valiosos durante o levantamento de requisitos.
+
+%     A partir desse ponto, embarcamos na fase de prototipação e elaboração dos primeiros wireframes do projeto. Nosso objetivo central foi criar uma interface responsiva, com foco destacado na experiência do usuário. Investimos cuidados significativos na definição do fluxo de dados da aplicação e na estruturação dos módulos que compõem nosso projeto. Paralelamente, desenvolvemos um diagrama de classes para proporcionar uma visão clara e organizada da arquitetura do sistema, estabelecendo as bases para a construção subsequente.
+
+%     Nosso processo de prototipagem foi demorado, entretanto conseguimos atingir um resultado satisfatório e creio que temos um ótimo MVP, dividimos as nossas responsabilidades principais, e iniciamos a produção seguindo o sprint backlog que fora desenvolvido durante a disciplina.
+
+% %------------------------------------------------------------------------------------------------------
+% \section{Artefatos Gerados}
+%     \subsection{Inception}
+%         \subsubsection{Pesquisa de Mercado}
+%             Explorando a necessidade de plataformas educacionais com curva de aprendizado suave, destaca-se a busca por simplicidade, modernidade e funcionalidades robustas, mantendo a inspiração no Moodle. A trajetória da educação online, desde os anos 1990 até a rápida transformação digital em 2020, evidencia a evolução do setor. Tendências contemporâneas, como aprendizado híbrido e experiências envolventes, convergem com a integração de tecnologias inovadoras.
+
+%             A análise de concorrentes, como Moodle, Canvas LMS, Google Classroom e Schoology, fornece insights sobre o panorama atual. No âmbito tecnológico, observa-se a crescente adoção do e-learning, a relevância do código aberto, a ênfase na colaboração, análise de dados, experiência do usuário, acessibilidade móvel e inovações em tecnologia educativa.
+
+%         \subsubsection{Descrição de personas e mapas de empatia}
+%             \begin{center}
+%                 \includegraphics[scale=0.5, angle=0]{images/persona1.png}
+%                 \captionof{figure}{Persona 1.}
+%                 \label{persona1}
+%             \end{center}
+
+%             Na Figura \ref{persona1}, apresentamos uma das personas fundamentais para nosso sistema: "João". João é um homem de 22 anos, atualmente cursando o ensino superior em Análise e Desenvolvimento de Sistemas. Além de sua idade e formação acadêmica, é crucial compreender suas características comportamentais, as quais delineiam sua interação com o sistema.
+
+%             João é notável por sua autodisciplina, proatividade e curiosidade inerentes. Essas qualidades desempenham um papel significativo em sua abordagem para com a utilização do sistema, pois ele é motivado intrinsecamente a buscar soluções e explorar novas funcionalidades. Sua autodisciplina assegura um engajamento consistente, enquanto sua proatividade o impulsiona a contribuir ativamente para a melhoria contínua do sistema.
+
+%             João possui diversas necessidades que devem ser cuidadosamente consideradas para garantir uma experiência otimizada no uso do nosso sistema. Destacam-se, entre essas necessidades, a importância de um acesso fácil ao conteúdo, uma comunicação clara e eficiente, além da necessidade de flexibilidade no processo de aprendizado.
+
+%             A facilidade de acesso ao conteúdo é vital para João, pois permite que ele navegue intuitivamente pelo sistema, encontrando informações de maneira rápida e eficaz. A clareza na comunicação é fundamental para garantir que as instruções, mensagens e feedbacks fornecidos pelo sistema sejam compreendidos de maneira imediata, contribuindo para uma interação mais eficiente e satisfatória.
+            
+%             Além disso, a flexibilidade no processo de aprendizado é uma característica crucial para João. Isso implica em proporcionar diferentes abordagens e recursos que se adaptem ao seu estilo individual de aprendizagem, permitindo que ele absorva o conteúdo de maneira mais eficaz e personalizada.
+            
+%             \begin{center}
+%                 \includegraphics[scale=0.5, angle=0]{images/persona1_map.png}
+%                 \captionof{figure}{Mapa de empatia da persona 1.}
+%                 \label{empatia1}
+%             \end{center}
+
+%             Na Figura \ref{empatia1}, apresentamos o mapa de empatia da persona "João", cuja representação visual pode ser vista na Figura \ref{persona1}. Esse mapa proporciona uma visão abrangente dos aspectos psicológicos e comportamentais de João, destacando o que ele pensa, sente, ouve, vê, fala e faz, bem como suas dores e necessidades.
+
+%             Este mapeamento detalhado permite uma compreensão mais profunda da experiência de João em relação ao nosso sistema. Ao explorar seus pensamentos, sentimentos e ações, conseguimos antecipar suas expectativas e adaptar as funcionalidades do sistema para atender às suas necessidades específicas.
+            
+%             Ao integrar o mapa de empatia com a persona previamente apresentada na Figura \ref{persona1}, conseguimos uma compreensão mais holística de João, capacitando-nos a desenvolver soluções mais alinhadas com suas características e proporcionar uma experiência mais personalizada e eficaz.
+            
+%             \begin{center}
+%                 \includegraphics[scale=0.5, angle=0]{images/persona2.png}
+%                 \captionof{figure}{Persona 2.}
+%                 \label{persona2}
+%             \end{center}
+
+            
+%             Na Figura \ref{persona2}, apresentamos a persona "Vitor", um profissional de 35 anos que atua como professor de Algoritmos em cursos superiores de Análise e Desenvolvimento de Sistemas. Vitor é mestre em Ciência da Computação, com ênfase em inteligência artificial, o que reflete sua expertise na área.
+            
+%             Vitor se destaca por suas características comportamentais notáveis. Demonstrando um comprometimento inabalável com o ensino, ele é reconhecido por sua organização, habilidades comunicativas aguçadas e um interesse contínuo pela evolução tecnológica. Sua busca constante por novos recursos evidencia seu compromisso em aprimorar constantemente a qualidade do ensino que oferece.
+            
+%             As necessidades específicas de Vitor em relação a uma plataforma de gerenciamento educacional são fundamentais para otimizar seu papel como educador. Ele busca uma ferramenta que não apenas permita a criação de atividades interativas e o compartilhamento eficiente de materiais de apoio, mas também ofereça a capacidade de avaliar o progresso de seus alunos. A interface desejada por Vitor deve ser amigável e intuitiva, proporcionando feedback detalhado para enriquecer sua avaliação pedagógica.
+            
+%             \begin{center}
+%                 \includegraphics[scale=0.5, angle=0]{images/persona2_map.png}
+%                 \captionof{figure}{Mapa de empatia da persona 2.}
+%                 \label{empatia2}
+%             \end{center}
+
+            
+%             Na Figura \ref{empatia2}, exploramos o mapa de empatia associado à persona "Vitor", previamente introduzida na Figura \ref{persona2}. Este mapa proporciona uma visão abrangente dos aspectos psicológicos e comportamentais específicos de Vitor, delineando o que ele pensa, sente, ouve, vê, fala, além de identificar suas dores e necessidades.
+            
+%             Ao analisar seu pensamento, obtemos insights sobre suas reflexões e abordagens mentais em relação ao ensino de Algoritmos. Compreendemos suas emoções, capturando nuances importantes de sua experiência. Ao considerar o que ele ouve e vê, ganhamos percepções valiosas sobre suas fontes de informação e influências visuais.
+            
+%             O mapeamento das dores de Vitor permite-nos identificar os desafios que ele enfrenta em seu papel como professor, enquanto as suas necessidades indicam as áreas específicas onde ele busca melhorias. Este enfoque holístico não apenas proporciona uma compreensão mais profunda de Vitor como educador, mas também direciona nosso desenvolvimento para criar soluções que verdadeiramente atendam às suas expectativas e requisitos únicos. 
+
+%         \vfill
+        
+%         \subsubsection{Caixa do Produto}
+%             \textbf{Benefícios:}
+%             \begin{itemize}
+%                 \item Experiência Intuitiva: O DaVinti Project oferece uma experiência intuitiva e amigável para estudantes e instituições, facilitando a navegação e uso da plataforma desde o primeiro dia.
+%                 \item Adoção Sem Complicações: Com uma curva de aprendizado baixa, professores e alunos podem rapidamente dominar e aproveitar todas as funcionalidades da plataforma, otimizando o processo de ensino e aprendizado.
+%             \end{itemize}                                   
+            
+%             \textbf{Funcionalidades:}
+%             \begin{itemize}
+%                 \item Permitir gerenciar alunos e cursos publicados na plataforma.
+%                 \item Permitir aos alunos que gerencie seus cursos matriculados.
+%                 \item Permitir aos alunos o acompanhamento do seu progresso em cada curso.
+%                 \item Permitir aos instrutores gerenciar seus cursos.
+%                 \item Permitir a instrutores agregar diferentes tipos de conteúdos em suas aulas para dar o máximo de suporte para o aluno.
+%             \end{itemize}
+            
+%         \subsubsection{Diagrama de navegação, rabisco frame e jornada do usuário}
+%             \begin{center}
+%                 \includegraphics[scale=0.2]{images/rabisco.jpg}
+%                 \captionof{figure}{Rabisco Frame.}
+%                 \label{Rabisco}
+%             \end{center} 
+
+%             Na Figura \ref{Rabisco}, apresentamos o "rabisco frame", um esboço inicial que encapsula a essência e a disposição primária de nossas telas propostas. Este esquema visual oferece uma visão panorâmica das principais interfaces do nosso sistema, destacando as etapas fundamentais da experiência do usuário.
+
+%             O "rabisco frame" compreende as seguintes telas principais:
+            
+%             \textbf{Tela de Login:}
+%             \begin{itemize}
+%               \item Ponto de entrada para usuários acessarem o sistema.
+%               \item Interface simples para inserção de credenciais.
+%             \end{itemize}
+            
+%             \textbf{Listagem de Cursos:}
+%             \begin{itemize}
+%               \item Apresenta uma visão geral de todos os cursos disponíveis.
+%               \item Facilita a navegação e a escolha de cursos pelos usuários.
+%             \end{itemize}
+            
+%             \textbf{Cursos Matriculados:}
+%             \begin{itemize}
+%               \item Exibe os cursos nos quais o usuário está matriculado.
+%               \item Possibilita fácil acesso às informações relevantes.
+%             \end{itemize}
+            
+%             \textbf{Visualização de Conteúdos do Curso:}
+%             \begin{itemize}
+%               \item Oferece uma interface para explorar o conteúdo específico de um curso.
+%               \item Facilita a navegação entre módulos, aulas e materiais didáticos.
+%             \end{itemize}
+
+%             \begin{center}
+%                 \includegraphics[scale=0.5]{images/Jornada do usuario.png}
+%                 \captionof{figure}{Jornada do Usuário.}
+%                 \label{Jornada}
+%             \end{center} 
+
+%             Após a apresentação do "rabiscoframe", figura \ref{Rabisco}, exploramos a Jornada do Usuário na Figura \ref{Jornada}. Neste exemplo, acompanhamos a rotina da persona "João" (conforme apresentado na Figura \ref{persona1}) desde o início do seu dia até o momento em que ele entra na plataforma DaVinti para assistir a uma aula do curso em que está matriculado.
+
+
+%         \subsubsection{Sprint backlog}
+%             \begin{center}
+%                 \includegraphics[scale=0.4]{images/backlog.png}
+%                 \captionof{figure}{Sprint Backlog.}
+%                 \label{SprintBacklog}
+%             \end{center} 
+
+%             No contexto do desenvolvimento ágil, apresentamos o Sprint Backlog, uma peça fundamental no planejamento de iterações. O Sprint Backlog é uma lista priorizada de tarefas e funcionalidades que a equipe de desenvolvimento compromete-se a realizar durante um sprint específico.
+
+%             No nosso contexto, o Sprint Backlog é um reflexo direto das metas e objetivos definidos para o sprint em questão. Cada item no backlog representa uma unidade de trabalho específica, como implementação de recursos, correção de bugs ou melhorias no sistema. 
+            
+%             Durante o sprint, a equipe trabalha ativamente nos itens do Sprint Backlog, colaborando de maneira eficiente para alcançar as metas estabelecidas. A cada sprint, o Sprint Backlog é revisado e ajustado conforme necessário, permitindo uma adaptação contínua às mudanças nas prioridades ou requisitos.
+
+%         \subsubsection{Modelo Entidade Relacionamento}
+%             \begin{center}
+%                 \includegraphics[scale=0.2, angle=0]{images/MER.png}
+%                 \captionof{figure}{Modelo Entidade Relacionamento.}
+%                 \label{MER}
+%             \end{center}
+
+%             O Diagrama de Modelo de Entidade-Relacionamento (MER), apresentado na figura \ref{MER}, é uma representação visual que descreve as entidades de um sistema e os relacionamentos entre elas. Este diagrama é uma ferramenta fundamental na modelagem de dados, proporcionando uma visão clara da estrutura subjacente do banco de dados.
+
+%             No nosso contexto, o MER destaca as principais entidades, suas atribuições e como essas entidades estão interconectadas. Cada entidade representa um conjunto distinto de dados, enquanto os relacionamentos indicam como essas entidades estão associadas umas às outras.
+
+%     \subsection{Implementação}
+%         \subsubsection{Modelo de banco de dados}
+%             \begin{center}
+%                 \includegraphics[scale=0.3, angle=0]{images/modelo_banco.png}
+%                 \captionof{figure}{Modelo de Banco de Dados.}
+%                 \label{Modelo_Banco}
+%             \end{center}
+
+%             O Modelo de Banco de Dados, figura \ref{Modelo_Banco}, é a representação conceitual e estrutural de como os dados são organizados, armazenados e acessados em um sistema de gerenciamento de banco de dados (SGBD). Ele fornece uma visão abstrata das entidades, relacionamentos, atributos e restrições que definem o esquema do banco de dados.
+
+%             No nosso contexto, o modelo de banco de dados abrange a identificação de entidades (tabelas) que representam objetos do mundo real no sistema e a definição dos atributos (campos) associados a cada entidade, especificando o tipo de dado e outras propriedades.
+            
+%             Os relacionamentos especificam como as entidades estão interligadas, indicando a cardinalidade e a natureza dessas relações. Além disso, o modelo designa chaves primárias que identificam exclusivamente cada registro em uma tabela e define chaves estrangeiras para estabelecer relacionamentos entre diferentes tabelas.
+    
+%         \subsubsection{Relatório de bugs}
+%             Ao iniciar o projeto, enfrentamos desafios significativos com o Docker. Nos primeiros 50 commits, cada modificação no código resultava em erros ao tentar executar o Docker. Isso frequentemente demandava ajustes no Dockerfile ou no arquivo compose.yaml para corrigir os problemas identificados. Essas dificuldades iniciais com o Docker impactaram o fluxo de desenvolvimento, exigindo atenção constante para garantir que as alterações no código fossem refletidas corretamente no ambiente Docker.
+
+%             Encontramos um desafio adicional relacionado a referências cíclicas. Um exemplo notável foi a entidade "Course", que possuía uma referência ao "Instructor", enquanto este, por sua vez, mantinha uma lista de cursos. Esse arranjo resultava em um bug de referência cíclica ao realizar uma operação "get" em uma das duas entidades. Isso levava a um loop indesejado, prejudicando a estabilidade e a funcionalidade do sistema.
+
+%         \subsubsection{Principais telas do sistema funcionando}
+        
+        
+%             \begin{center}
+%                 \includegraphics[scale=0.3]{images/Tela_login.jpg}
+%                 \captionof{figure}{Tela de Login.}
+%                 \label{Login}
+%             \end{center}    
+
+%             Na primeira interação com o sistema, os usuários serão recebidos pela tela de login, figura \ref{Login}, uma interface essencial para iniciar a experiência. Além da barra de navegação, que é uma presença consistente em todas as telas, um card proeminente ocupará o centro da tela, fornecendo os campos necessários para autenticação.
+
+%             Este card de login apresenta de maneira clara e organizada os campos cruciais: "E-mail" e "Senha". Os usuários serão solicitados a inserir suas credenciais nesses campos. Uma vez preenchidos, a ação de clicar no botão "Entrar" iniciará o processo de autenticação e proporcionará acesso à plataforma.
+            
+%             \begin{center}
+%                 \includegraphics[scale=0.3]{images/Tela_registro.jpg}
+%                 \captionof{figure}{Tela de Registro.}
+%                 \label{Registro}
+%             \end{center}    
+
+%             Ao utilizar o sistema pela primeira vez, os usuários que ainda não possuem uma conta serão direcionados para a tela de registro, conforme ilustrado na Figura \ref{Registro}. Nesta tela, são apresentados campos essenciais, incluindo "Nome", "E-mail" e "Senha", que os usuários devem preencher com suas informações. Após inserir os dados desejados, a etapa seguinte consiste em clicar no botão "Registrar" para efetuar o cadastro na plataforma.
+
+%             \begin{center}
+%                 \includegraphics[scale=0.16]{images/courses.jpeg}
+%                 \captionof{figure}{Tela de cursos.}
+%                 \label{Cursos_page}
+%             \end{center}    
+
+%             Após a conclusão bem-sucedida do login, estudantes são imediatamente direcionados à tela de cursos, conforme mostrado na figura \ref{Cursos_page}, proporcionando um ponto central para explorar o conteúdo educacional. Nessa interface, uma visão abrangente dos cursos disponíveis é apresentada, oferecendo aos usuários a oportunidade de escolher novos cursos com facilidade.
+
+%             Para melhorar a experiência do usuário, implementamos um carrossel intuitivo no topo da página. Esse carrossel destaca os cursos que o usuário já iniciou, proporcionando um acesso rápido e direto aos cursos em andamento. Essa abordagem simplifica a navegação, permitindo que os usuários acessem facilmente os cursos que já estão participando, enquanto também exploram novas opções disponíveis.
+
+%             \begin{center}
+%                 \includegraphics[scale=0.16]{images/meus-cursos.jpeg}
+%                 \captionof{figure}{Tela de cursos matriculados.}
+%                 \label{meus-cursos}
+%             \end{center}  
+
+%            Através da barra de navegação, proporcionamos aos estudantes acesso direto à tela exclusiva "Meus Cursos", conforme ilustrado na Figura \ref{meus-cursos}. Nesse espaço personalizado, os estudantes podem visualizar uma síntese detalhada de seu progresso educacional.
+
+%             A tela "Meus Cursos" oferece informações essenciais, incluindo o número de cursos iniciados, cursos concluídos e a quantidade de aulas assistidas. Essa visão consolidada fornece uma compreensão rápida e abrangente do engajamento do estudante na plataforma.
+            
+%             Além disso, proporcionamos funcionalidades interativas. Os estudantes têm a capacidade de dar continuidade a cursos em andamento, garantindo uma transição eficiente entre as aulas. Adicionalmente, a opção de cancelar a matrícula em um curso específico está disponível, oferecendo flexibilidade e controle sobre as escolhas de aprendizado.
+
+%             \begin{center}
+%                 \includegraphics[scale=0.3]{images/Curso_page.png}
+%                 \captionof{figure}{Tela do curso.}
+%                 \label{curso-page}
+%             \end{center}  
+
+%             Ao adentrar um curso específico, conforme demonstrado na Figura \ref{curso-page}, os estudantes são recebidos por uma tela que oferece uma visão detalhada e envolvente do conteúdo educacional.
+
+%             Essa página do curso exibe informações cruciais, incluindo o título do curso, uma descrição abrangente que destaca os principais objetivos e conteúdos, além de detalhes sobre o instrutor responsável pelo curso. Isso proporciona aos estudantes uma compreensão imediata do que podem esperar e a qualificação do instrutor.
+            
+%             A lista de aulas do curso é apresentada de maneira organizada, oferecendo uma estrutura clara e sequencial do material didático. Um botão destacado, estrategicamente posicionado, permite que os estudantes iniciem ou continuem o curso com facilidade, facilitando a transição fluida entre as aulas.
+
+%             \begin{center}
+%                 \includegraphics[scale=0.16]{images/instrutor-cursos.jpeg}
+%                 \captionof{figure}{Tela de cursos do instrutor.}
+%                 \label{instrutor-cursos}
+%             \end{center}  
+            
+%             \begin{center}
+%                 \includegraphics[scale=0.16]{images/instrutor-criar-curso.jpeg}
+%                 \captionof{figure}{Tela de criar cursos.}
+%                 \label{instrutor-criar-cursos}
+%             \end{center}  
+%             \vspace{1cm}
+
+%             Após o processo de login, os instrutores serão automaticamente redirecionados para a página que exibe seus cursos, conforme representado na Figura \ref{instrutor-cursos}. Nesta tela, os instrutores desfrutam de um panorama completo e prático de suas responsabilidades educacionais.
+
+%             A lista de cursos do instrutor é apresentada de maneira clara, oferecendo visibilidade sobre os títulos dos cursos e uma prévia dos conteúdos ministrados através dos títulos das aulas associadas a cada curso. Essa abordagem proporciona uma visão abrangente dos cursos sob sua orientação.
+            
+%             Para simplificar a gestão de cursos, oferecemos funcionalidades interativas. Os instrutores têm a capacidade de deletar cursos existentes, proporcionando flexibilidade e controle sobre o conteúdo disponibilizado. Além disso, a opção de criar um novo curso é destacada, figura \ref{instrutor-criar-cursos}, permitindo que os instrutores expandam continuamente a oferta educacional.
+            
+%         \subsubsection{Link para o repositório}
+%             \url{https://github.com/IguJl15/davinti-project.git}
+        
+
+
+
+
+        
+% %------------------------------------------------------------------------------------------------------
+% \section{Detalhamento da implementação}
+
+%     \subsection{Clientes web com Frameworks e Bibliotecas de Mercado;}
+%     A implementação do projeto se baseia no uso do básico bem feito, utilizamos de tecnologias já bem consolidadas no mercado, para nossa API resolvemos nos basear na implementação do padrão Rest e focamos no uso de uma web mais atual com o foco nas chamadas SPAs, SINGLE PAGE APLICATIONS, onde a nossa API retornar Json que será consumido pelo nosso front-end produzido em React. E aliado a isso, fizemos o uso do cliente web Axios, para facilitar o processo de realizar requisições dentro do lado do usuário.
+
+%     \begin{center}
+%         \includegraphics[scale=0.2]{images/axios.png}
+%         \captionof{figure}{Implementação do Axios.}
+%         \label{Axios}
+%     \end{center}    
+
+%     \subsection{Arquiteturas baseadas em Camadas}
+%     Fizemos a divisão da nossa arquitetura baseada em camadas e segregando as responsabilidades do nosso projeto, tanto o front-end quanto o back-end são divididos em módulos, onde (na parte do back) cada um desses módulos possui suas camadas de API e sua camada de domain, tomando como base conceitos adquiridos em aulas e estudos sobre DDD
+
+%     \begin{center}
+%         \includegraphics[scale=0.6, angle=0]{images/back_diagram.png}
+%         \includegraphics[scale=0.7, angle=0]{images/arch.png}
+%         \captionof{figure}{Arquitetura do back-end.}
+%         \label{back_arch}
+%     \end{center}
+
+%     \begin{center}
+%         \includegraphics[scale=0.6, angle=0]{images/front_diagram.png}
+%         \includegraphics[scale=0.5, angle=0]{images/arch_front.png}
+%         \captionof{figure}{Arquitetura do front-end.}
+%         \label{front_arch}
+%     \end{center}
+
+
+%     \subsection{Autenticação e Autorização}
+%     Nosso processo de autenticação e autorização é feito com o uso do padrão Json Web Token, padrao esse utilizado para a assinatura de tokens que serão usados pelos usuários para que eles possam desempenhar suas devidas funções e responsabilidades, implementação de Access e Refresh token, também podem ser vistas em nosso escopo de autorização e autenticação.
+
+%     \begin{center}
+%         \includegraphics[scale=0.2]{images/login_command.png}
+%         \captionof{figure}{Comando de Login.}
+%         \label{Login_command}
+%     \end{center}    
+    
+%     \begin{center}
+%         \includegraphics[scale=0.2]{images/jwt_service.png}
+%         \captionof{figure}{Implementação do JWT.}
+%         \label{JWT}
+%     \end{center}    
+
+%     \subsection{Persistência via ORM}
+
+%     No âmbito da persistência de dados, mantendo a abordagem de "padronização de tecnologias", escolhendo um banco de dados relacional de renome, o PostgreSQL. Além disso, optamos pelo uso do ORM padrão do ecossistema Kotlin/Spring, o JPA (Java Persistence API).
+
+%     No contexto do nosso sistema, a representação da entidade "Course" no diagrama de entidade, como ilustrado na Figura \ref{entity}, proporciona uma visão estruturada e abrangente dos atributos e relacionamentos inerentes a essa entidade. Essa representação serve como uma base visual para compreender a estrutura essencial dos cursos dentro do sistema.
+    
+%     \begin{center}
+%         \includegraphics[scale=0.6]{images/entity.png}
+%         \captionof{figure}{Diagrama de Entidade para Persistência via ORM.}
+%         \label{entity}
+%     \end{center}
+%     Por fim, na Figura \ref{create}, apresentamos um exemplo elucidativo do processo de criação de dados utilizando o Object-Relational Mapping (ORM). Nesse cenário, o ORM age como uma ponte entre o paradigma orientado a objetos e o modelo relacional do banco de dados, simplificando a manipulação e persistência de objetos Java no banco de dados subjacente. O exemplo demonstra de forma prática como os dados do curso podem ser instanciados e persistidos no banco de dados por meio das funcionalidades oferecidas pelo ORM.    
+%     \begin{center}
+%         \includegraphics[scale=1]{images/repository.png}
+%         \captionof{figure}{Diagrama de Repositório para Persistência via ORM.}
+%         \label{repository}
+%     \end{center}
+%     No que tange à persistência de dados, o diagrama de repositório evidenciado na Figura \ref{repository} concentra-se na camada responsável pela interação com o banco de dados por meio do Java Persistence API (JPA). Essa camada de persistência desempenha um papel vital na comunicação eficiente entre o sistema e o banco de dados, facilitando operações como inserção, atualização, e recuperação de dados.
+%     \begin{center}
+%         \includegraphics[scale=0.6]{images/create.png}
+%         \captionof{figure}{Exemplo de Criação de Dados para Persistência via ORM.}
+%         \label{create}
+%     \end{center}    
+
+    
+%     \newpage
+%     \subsection{Deploy da Aplicação Web}
+
+%     A escolha da plataforma fly.io foi fundamentada em suas características robustas e flexíveis. Essa plataforma oferece recursos avançados, como escalabilidade automática, distribuição global e integração simplificada, proporcionando um ambiente confiável para hospedar a lógica do servidor.
+%     Essa escolha cuidadosa de plataforma de deploy têm como objetivo garantir não apenas a estabilidade e confiabilidade da nossa aplicação, mas também otimizar o processo de desenvolvimento contínuo. Dessa forma, estamos aptos a realizar atualizações e implementar melhorias de maneira ágil e eficaz.
+
+%     \begin{itemize}
+%       \item \textbf{Front end:} \url{https://davinti-project.fly.dev/}
+%       \item \textbf{Back end:} \url{https://davinti-project-backend.fly.dev/swagger-ui/index.html}
+%     \end{itemize}
+
+% %------------------------------------------------------------------------------------------------------
+% \newpage
+% \section{Conclusão}
+%     Essa conclusão será escrita de maneira despojada, a ideia é ter uma conversa com os professores que virão a ler esse pequeno monólogo.
+    
+%     Em conclusão, este projeto desempenhou um papel crucial tanto em nosso desenvolvimento pessoal quanto coletivo. Sua natureza mais "profissional" originou-se de um problema real que nos foi apresentado pelo professor Fernando. Embora tenhamos cumprido o prazo estipulado para a entrega do projeto e deste documento, enfrentamos desafios no gerenciamento do tempo e questões de escopo. Desde a disciplina inicial de projeto integrador, persistiu a ideia de tentar entregas superiores ao que poderíamos realizar em um intervalo tão pequeno de tempo. No entanto, esses problemas serviram como valiosos aprendizados, fornecendo-nos insights para avaliar o escopo de projetos futuros e aprimorar nossa dinâmica de trabalho em equipe, otimizando assim a gestão do nosso tempo.
+
+%     Sobre horizontes futuros, nossa parceria, que perdura há bastante tempo, é fundamentada na confiança mútua entre os integrantes. Vemos nossa equipe não apenas como um grupo de trabalho, mas como amigos, uma dinâmica que planejamos manter. A promoção de um ambiente leve e descontraído entre os membros é essencial, sendo esse o ponto crucial para o sucesso de qualquer equipe. Cada integrante compreende sua responsabilidade e contribui de maneira significativa para assegurar um resultado final de qualidade. Nossa meta principal é concluir o projeto proposto, implementando tudo o que foi estabelecido desde o início da concepção da ideia que nos foi confiada. Nas disciplinas de projeto integrador 3 temos como ideia principal manter a mesma equipe, 
+
+%     Essa parceria mostra bem os diferentes níveis que uma equipe pode ter, mentes bem distintas e com ideias de pensamento bastante diferentes uma da outra, e creio que esse tenha sido o ponto mais interessante de todo esse projeto, um ajudando o outro. Vejo essa disciplina mais do que apenas um desenvolvimento no campo da programação, mas vejo como sendo algo no campo mental de cada um dos participantes, muitas vezes você se sente incapaz e frustrado por conta dos mais diversos problemas que foram encontrados dentro do projeto, cada um de nós sentimos bem na pele como são momentos de alegria, euforia, tristeza, chamar esse período de uma montanha de sentimentos não seria um equivoco. Kelson, Kaike e Igor são pessoas bem diferentes do que elas eram desde o inicio da disciplina ( ao menos um pouco rsrsrs ).
+% %------------------------------------------------------------------------------------------------------
+
+% OBSERVAÇÃO: A seção de referências deve ser gerada automaticamente usando os comandos \cite{} do LaTex. Recomenda-se o uso do padrão IEEE para citações, conforme abaixo.
+ \newpage
+ \bibliographystyle{IEEEtran}
+ \bibliography{bibliografia}
+
+\end{document}
