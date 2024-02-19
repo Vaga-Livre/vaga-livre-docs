@@ -7,7 +7,10 @@
 \usepackage{indentfirst}
 \usepackage{url}
 \usepackage{xcolor}
+\usepackage{makecell}
+\usepackage{multirow}
 \usepackage{tabularx}
+\usepackage{float}
 % \usepackage{booktabs}
 \definecolor{barblue}{RGB}{153,204,254}
 \definecolor{groupblue}{RGB}{51,102,254}
@@ -16,6 +19,7 @@
 \usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
 \usepackage{hyperref}
 
+\restylefloat{table}
 \setlength{\parindent}{1.2cm}
 \setlength{\parskip}{.1cm}
 \setlength{\oddsidemargin}{0.1cm}    
@@ -194,6 +198,121 @@ Uma solução bem sucedida seria:
         \hline
     \end{tabularx}
 \end{table}
+
+\section{Ambiente do usuário}
+
+
+\subsection{Ambiente físico}
+
+    Não possui ambiente físico, apenas digital.
+
+\subsection{Ambiente computacional}
+
+    Os usuários que irão utilizar o sistema devem possuir um dispositivo móvel (celular, tablet) que possua acesso a internet para poder realizar o acesso ao sistema e realizar suas operações.
+
+\section{Público alvo}
+
+    O público-alvo do aplicativo Vaga Livre são motoristas frequentes que enfrentam as dificuldades da busca por vagas de estacionamento em seu dia a dia. Seja para encontrar um lugar rapidamente em áreas congestionadas, evitar o estresse de dar voltas desnecessárias ou simplesmente ganhar praticidade e otimizar seu tempo, o Vaga Livre oferece uma solução completa para quem busca tranquilidade e segurança ao estacionar seu veículo.
+
+\section{Não Escopo do Vaga Livre}
+
+\begin{enumerate}
+\setlength\itemsep{-1.2em}
+\item Foco no Proprietário do Estacionamento \\ 
+    \tabitem{Aplicativo para Proprietários: No momento, o foco do projeto está em desenvolver um aplicativo completo e intuitivo para o usuário final, o motorista que busca uma vaga de estacionamento. O desenvolvimento de um aplicativo para proprietários de estacionamentos será considerado em etapas posteriores.} \\
+    \tabitem{Gerenciamento por Proprietários: As funcionalidades relacionadas à gestão de vagas por parte dos proprietários, como atualização de disponibilidade, controle de acesso e preços dinâmicos, não serão contempladas nesta fase.} \\
+
+\item Integração com Hardware \\
+    \tabitem{Integração com Totens: A integração com totens de entrada e saída dos estacionamentos não está prevista no escopo inicial. O foco está na busca e reserva de vagas através do aplicativo.} \\
+    \tabitem{Pagamento via App: O pagamento da tarifa de estacionamento não será realizado através do aplicativo nesta fase. Os métodos tradicionais de pagamento (dinheiro, cartão, etc.) serão utilizados.}\\
+
+\item Expansão Geográfica \\
+    \tabitem{Abrangência Nacional: A plataforma Vaga Livre será inicialmente lançada em uma região específica, com foco na validação do modelo de negócio e na otimização da experiência do usuário. A expansão para outras cidades e regiões será considerada em etapas posteriores.} \\
+
+\item Visualização detalhada do Estacionamento \\
+    \tabitem{Fotos e vídeos do local, mapa interativo com trajeto e informações detalhadas sobre o estacionamento (preço por hora, tipos de vagas, serviços disponíveis, regras e normas, etc.) serão consideradas em etapas posteriores do projeto.} \\
+
+\item Funcionalidades Adicionais \\
+    \tabitem{Sistema de Navegação: A integração com sistemas de navegação para direcionamento ao estacionamento não será implementada nesta fase. O foco está na busca e reserva de vagas.} \\
+
+\end{enumerate}
+
+\section{Características do Produto}
+
+Esta seção lista os requisitos de produto derivado das necessidades dos usuários.
+
+\subsection{Necessidades do Usuário}
+
+\begin{table}[H]
+    \begin{tabularx}{\linewidth}{ | r | r | X | }
+        \hline
+         \bf{Contexto} & \bf{Indíce} & \bf{Descrição} \\
+        \hline
+        \multirow{3}{7.5em}{Conta e Acesso}
+            & \bf{001} & Registro de novos usuários com informações básicas (nome, emai, senha, etc) \\ \cline{2-3}
+            & \bf{002} & Login com autênticação segura \\ \cline{2-3}
+            & \bf{003} & Opção de logout e exclusão de conta \\ \hline
+        \multirow{2}{7.5em}{Busca de Estacionamentos}
+            & \bf{004} & Busca de estacionamentos por nome ou características  \\ \cline{2-3}
+            & \bf{005} & Busca de estacionamentos por meio de proximidade com localização (endereço digitado ou localização atual) \\ \hline
+        \multirow{2}{7.5em}{Visualização de Estacionamentos}
+            & \bf{006} & Informações detalhadas sobre o estacionamento, como preço por hora, tipo de vagas, serviços disponíveis, regras e normas, etc \\ \cline{2-3}
+            & \bf{007} & Opção de abrir rota para o estacionamento em app externo \\ \hline
+        \multirow{3}{7.5em}{Reserva de Vagas}
+            & \bf{008} & Seleção de data e horário desejados para a reserva da vaga \\ \cline{2-3}
+            & \bf{009} & Confirmação da reserva por meio do pagamento \\ \cline{2-3}
+            & \bf{010} & Cancelamento ou alteração da reserva com antecedência \\ \hline
+        \multirow{3}{7.5em}{Gerenciamento de Reservas}
+            & \bf{011} & Visualização de todas as reservas ativas futuras do usuário \\ \cline{2-3}
+            & \bf{012} & Detalhes de reservas \\ \cline{2-3}
+            & \bf{013} & Histórico de reservas para consulta e acompanhamento \\ \hline
+        \multirow{2}{7.5em}{Acesso ao estabelecimento}
+            & \bf{014} & Ativação da cancela do estacionamento por meio de leitura de QR Code do totem \\ \cline{2-3}
+            & \bf{015} & Acesso a contato do estacionamento para suporte em caso de ajuda para reservas \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+\subsection{Necessidades do proprietário}
+
+\begin{table}[H]
+    \begin{tabularx}{\linewidth}{ | r | r | X | }
+        \hline
+         Contexto & \bf{Indíce} & \bf{Descrição} \\
+        \hline
+        \multirow{1}{7.5em}{Conta e Acesso}
+            & \bf{001} & Login com autenticação segura usando as informações repassadas pela equipe do Vaga Livre \\ \hline
+        \multirow{3}{7.5em}{Gerenciamento de Vagas}
+            & \bf{002} & Visualizar todas as vagas do seu estacionamento incluindo sua identificação e informações adicionais \\ \cline{2-3}
+            & \bf{003} & Monitorar o status das vagas em tempo real, com atualizações instatâneas \\ \cline{2-3}
+            & \bf{004} & Visualizar o histórico de reservas em seu estacionamento \\ \hline
+        \multirow{2}{7.5em}{Controle de Reservas}
+            & \bf{005} & Visualizar todas as reservas ativas e futuras com todos seus detalhes \\ \cline{2-3}
+            & \bf{006} & Cancelar reservas manualmente \\ \hline
+        \multirow{1}{7.5em}{Gestão financeira}
+            & \bf{007} & Visualizar um resumo financeiro com o valor total em caixa (somatório de reservas finalizadas) \\ \hline
+        \multirow{1}{7.5em}{Configurações e Administração}
+            & \bf{008} & Definir horário de funcionamento do estacionamento, regras de reserva e tarifas (valor hora) \\ 
+        \hline
+    \end{tabularx}
+\end{table}
+
+\subsection{Cancela automática}
+
+\begin{table}[H]
+    \begin{tabularx}{\linewidth}{ | r | r | X | }
+        \hline
+        \bf{Contexto} &\bf{Indíce}& \bf{Descrição} \\
+        \hline
+        \multirow{4}{7.5em}{Autorização de Entrada}  
+            & \bf{001} & Solicitar ao sistema um novo código de verificação \\ \cline{2-3}
+            & \bf{002} & Abrir a cancela \\ \cline{2-3}
+            & \bf{003} & Fechar a cancela \\ \cline{2-3}
+            & \bf{004} & Gerar um QR Code que deve ser mostrado na tela \\ 
+        \hline
+    \end{tabularx}
+\end{table}
+
 
 % subsection Partes interessadas (end)
 
