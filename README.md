@@ -11,6 +11,11 @@ com a linguagem de programacao JAVA bem como o framework Spring Boot.
 Estou sempre em busca de me autodesenvolver e evoluir dentro da area, gosto sempre de explorar novas maneiras de resolver os problemas, sempre busco me atualizar ao maximo nas tecnologias do momento. 
 
 ### Kaike Dias Miranda
+Entusiasta de tecnologia, com cerca de 1 ano de experiencia na area.
+
+Atualmente atuando como desenvolvedor mobile com o framework Flutter.
+
+
 
 ### Igor Julliano Sotero
 
