@@ -1,0 +1,79 @@
+@startuml Diagrama de Classes
+
+'GeoLocation: Longitute n Latitute
+class Park {
+    +int id
+    +string name
+    +string description
+    +GeoLocation location
+    +decimal hourlyRate
+    +string contactInfo
+    +Time startTime
+    +Time endTime
+}
+
+enum ParkType {
+    +car
+    +motocycle
+    +bike
+}
+
+class Gate {
+    +int id
+    'ip address
+    +string location
+    +string secretTokenHash
+    +string currentQRCode
+}
+
+Park -r- Gate
+Park "0..*" -l- "1" ParkType
+Park "1" -- "1..*" ParkingSpace
+
+class ParkingSpace {
+    +int id
+    +Reservation? activeReservation
+
+    +bool isOccupied()
+    +bool isOccupied(DateTime at)
+}
+
+ParkingSpace "1" -r- "0..*" Reservation
+
+class Reservation {
+    +int id
+    +Time startTime
+    +TimeInterval duration
+    +Person author
+    +decimal hourlyRate
+    +bool paid()
+}
+
+Reservation "1" -- "0..*" Payment
+
+class Payment {
+    +int id
+    +DateTime date
+    +decimal value
+    +PaymentType type
+}
+
+Payment "0..*" -- "1" PaymentType
+
+enum PaymentType {
+    +pix
+    +creditCard
+    +money
+}
+
+Person "1" -l- "0..*" Reservation
+
+class Person {
+    +int id
+    +string name
+    +string email
+    +string firebaseId
+}
+
+
+@enduml
