@@ -1,3 +1,6 @@
 {
-    "latex-workshop.latex.outDir": "%DIR%/build"
+    "latex-workshop.latex.outDir": "%DIR%/build",
+    "conventionalCommits.scopes": [
+        "Visão"
+    ]
 }
