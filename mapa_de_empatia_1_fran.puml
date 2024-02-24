@@ -1,0 +1,84 @@
+@startmindmap
+
+
+<style>
+node {
+    Padding 12
+    Margin 4
+    RoundCorner 32
+    MaximumWidth 500
+    MinimumWidth 200
+    Shadowing 1
+    BackgroundColor WhiteSmoke
+}
+rootNode {
+    Shadowing 0
+    MaximumWidth 0
+    MinimumWidth 0
+}
+legend {
+    BackgroundColor WhiteSmoke
+}
+</style>
+
+header %date("dd/MM/yyyy' às 'HH:mm")
+title Mapa de Empatia
+
+*:Nome: **Francislene**
+Idade: 44 anos
+----
+Esposa e mãe que algumas 
+vezes ao mês vai ao centro
+da cidade.;
+**:**Pensa e sente**
+----
+* "Que dificuldade para encontrar um estacionamento perto daqui"
+* "Tenho que me planejar para não atrasar com outras responsabilidades"
+* "Hoje é dia de vendas, então os estacionamentos estarão lotados"
+* "Esse trânsito está uma bagunça"
+* "Estou precisando limpar o carro"
+* "Será que acontecerá alguma coisa se eu deixar minha bolsa no carro?"
+;
+
+**:**Ver**
+----
+* Diversos preços diferentes
+* Pessoas estacionando em locais afastados
+* Veículo expostos ao sol
+* Estacionamentos com estrutura não apropriada
+;
+
+left side
+
+**:**Fala e Faz**
+----
+* "Não sei onde posso ou não estacionar nessa rua"
+* "Ja achei o endereço de destino, agora só basta deixar o carro em um local seguro"
+* Deixa o veículo em estacionamento e deixa a chave no estabelecimento para não perder
+* "vou ter que usar estacionamento privado para ganhar tempo, se não me atrasarei"
+;
+
+**:**Ouve**
+----
+* Notícias sobre furtos de objetos em carros estacionados em locais sem segurança
+* Seu marido pedindo-a para ter cuidado com o carro
+;
+
+
+legend
+    **Dores**
+    ----
+    * Insegurança ao estacionar na rua
+    * Falta de espaço em vagas públicas
+    * Perda de tempo
+    ====
+    **Necessidades** 
+    ----
+    * Local seguro para deixar o veículo
+    * Agilidade para estacionar
+    * "Preciso saber onde vou estacionar"
+end legend
+
+
+
+@endmindmap
