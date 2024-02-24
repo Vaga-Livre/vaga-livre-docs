@@ -1,6 +1,8 @@
-@startuml Diagrama de Classes
+@startuml
 
-'GeoLocation: Longitute n Latitute
+header %date("dd/MM/yyyy' às 'HH:mm")
+title Diagrama de Classes
+
 class Park {
     +int id
     +string name
@@ -26,8 +28,8 @@ class Gate {
     +string currentQRCode
 }
 
-Park -r- Gate
-Park "0..*" -l- "1" ParkType
+Park "1" -r- "1..*" Gate
+Park "0..*" -left- "    1" ParkType
 Park "1" -- "1..*" ParkingSpace
 
 class ParkingSpace {
@@ -38,7 +40,7 @@ class ParkingSpace {
     +bool isOccupied(DateTime at)
 }
 
-ParkingSpace "1" -r- "0..*" Reservation
+ParkingSpace "1    " -r- "0..*" Reservation
 
 class Reservation {
     +int id
@@ -66,7 +68,7 @@ enum PaymentType {
     +money
 }
 
-Person "1" -l- "0..*" Reservation
+Person "1    " -l- "0..*" Reservation
 
 class Person {
     +int id
