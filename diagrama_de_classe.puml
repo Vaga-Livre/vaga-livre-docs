@@ -35,6 +35,7 @@ Park "1" -- "1..*" ParkingSpace
 class ParkingSpace {
     +int id
     +Reservation? activeReservation
+    + List<Reservation> reservations
 
     +bool isOccupied()
     +bool isOccupied(DateTime at)
@@ -44,6 +45,7 @@ ParkingSpace "1    " -r- "0..*" Reservation
 
 class Reservation {
     +int id
+    +Park park
     +Time startTime
     +TimeInterval duration
     +Person author
@@ -74,6 +76,8 @@ class Person {
     +int id
     +string name
     +string email
+    +Date bithday
+    +string phone
     +string firebaseId
 }
 
